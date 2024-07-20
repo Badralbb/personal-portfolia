@@ -5,13 +5,41 @@ import { VscGithubAlt } from "react-icons/vsc";
 import { LuTwitter } from "react-icons/lu";
 import { FaFigma } from "react-icons/fa";
 import Link from "next/link";
+import { AwesomeButton } from "react-awesome-button";
+import "react-awesome-button/dist/styles.css";
+import { FiSun } from "react-icons/fi";
+
+const HeadItems = [
+  { title: "about", link: "#about" },
+  { title: "work", link: "#work" },
+  { title: "testimonial", link: "#testimonial" },
+  { title: "contact", link: "#contact" },
+];
 export const Head = () => {
   return (
-    <div id="head">
+    <div>
       <div className="flex justify-between items-center">
         <div className="text-3xl">&lt;SS/&gt;</div>
+        <div className="hidden md:flex gap-6 items-center ">
+          {HeadItems.map((item, link) => (
+            <Link href={item.link} key={link}>
+              {item.title}
+            </Link>
+          ))}
+          <svg
+            width="1"
+            height="24"
+            viewBox="0 0 1 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <line x1="0.5" y1="24" x2="0.5" stroke="#F3F4F6" />
+          </svg>
+          <FiSun />
+          <AwesomeButton>Download Cv</AwesomeButton>
+        </div>
 
-        <IoIosMenu className="size-6" />
+        <IoIosMenu className="size-6 md:hidden" />
       </div>
       <HeadInformation />
     </div>
@@ -20,7 +48,7 @@ export const Head = () => {
 
 const HeadInformation = () => {
   return (
-    <div className="mt-16 flex flex-col gap-12 md:flex-row items-center">
+    <div className="flex flex-col gap-12 md:flex-row items-center md:justify-between py-16">
       <div className="max-w-[260px] md:max-w-[240px] bg-[black] w-full md:order-10 flex justify-center md:mt-[25px]">
         <Image
           src={"/images/Pic.png"}
@@ -30,7 +58,7 @@ const HeadInformation = () => {
         />
       </div>
 
-      <div className="flex flex-col gap-12">
+      <div className="flex flex-col gap-12 md:w-[60%]">
         <div>
           <h1 className="mb-2 text-[#111827]">Hi, I’m Sagar 👋</h1>
           <p>
