@@ -1,15 +1,22 @@
 import { AboutMe } from "@/components/AboutMe";
 import { Head } from "@/components/Head";
+import { Skills } from "@/components/Skills";
 import { AwesomeButton } from "react-awesome-button";
 import "react-awesome-button/dist/styles.css";
 export default function Home() {
   return (
-    <main className="px-4">
-      <section className="max-w-[1280px] mx-auto">
+    <main>
+      <section className="max-w-[1280px] mx-auto px-4">
         <Head />
-        <AboutMe />
       </section>
-      {/* <AwesomeButton>button</AwesomeButton> */}
+      <section className="bg-[#F9FAFB] px-4">
+        <div className="max-w-[1280px] mx-auto">
+          <AboutMe />
+        </div>
+      </section>
+      <section className="max-w-[1280px] mx-auto px-4 py-16">
+        <Skills />
+      </section>
     </main>
   );
 }

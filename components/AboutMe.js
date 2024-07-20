@@ -5,8 +5,8 @@ export const AboutMe = () => {
   return (
     <div id="about" className="py-16">
       <BUttons title={"about"} />
-      <div className="flex flex-col gap-12 items-center md:flex-row md:items-start md:justify-between">
-        <div className="max-w-[400px] flex md:flex-1 bg-[black] w-full justify-center md:mt-[25px] mt-[44px]">
+      <div className="flex flex-col gap-12 items-center md:flex-row md:items-start md:justify-between mt-12">
+        <div className="max-w-[400px] flex md:flex-1 bg-[black] w-full justify-center md:mt-[25px]">
           <Image
             src={"/images/Pic.jpg"}
             width={400}
