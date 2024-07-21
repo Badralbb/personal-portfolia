@@ -1,6 +1,8 @@
 import { AboutMe } from "@/components/AboutMe";
+import { Experience } from "@/components/Experience";
 import { Head } from "@/components/Head";
 import { Skills } from "@/components/Skills";
+import { Work } from "@/components/Work";
 import { AwesomeButton } from "react-awesome-button";
 import "react-awesome-button/dist/styles.css";
 export default function Home() {
@@ -16,6 +18,14 @@ export default function Home() {
       </section>
       <section className="max-w-[1280px] mx-auto px-4 py-16">
         <Skills />
+      </section>
+      <section className="bg-[#F9FAFB] px-4 py-16">
+        <div className="max-w-[1280px] mx-auto">
+          <Experience />
+        </div>
+      </section>
+      <section className="max-w-[1280px] mx-auto px-4 py-16">
+        <Work />
       </section>
     </main>
   );
