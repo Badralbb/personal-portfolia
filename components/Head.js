@@ -8,6 +8,9 @@ import Link from "next/link";
 import { AwesomeButton } from "react-awesome-button";
 import "react-awesome-button/dist/styles.css";
 import { FiSun } from "react-icons/fi";
+import { useState } from "react";
+import { CiSquareRemove } from "react-icons/ci";
+import { IoMoonOutline } from "react-icons/io5";
 
 const HeadItems = [
   { title: "about", link: "#about" },
@@ -16,8 +19,68 @@ const HeadItems = [
   { title: "contact", link: "#contact" },
 ];
 export const Head = () => {
+  const [open, setOpen] = useState(false);
+  function Block() {
+    setOpen(true);
+  }
+  function Hidden() {
+    setOpen(false);
+  }
+  const [dark, setDark] = useState(false);
+  function DarkOn() {
+    setDark(true);
+  }
+  function DarkOff() {
+    setDark(false);
+  }
   return (
     <div>
+      <div className={`md:hidden ${dark ? "text-white" : ""}`}>
+        <div
+          className={`fixed ${
+            dark ? "bg-white" : "bg-slate-500"
+          } z-10 shadow-xl transition-[6s] ${
+            open ? "inset-0" : "-left-full -top-full"
+          }`}
+        ></div>
+        <div
+          className={`fixed transition-[6s] z-20 ${
+            dark ? "bg-[#030712]" : "bg-white"
+          } bottom-0 top-0 w-[80%] ${open ? "right-0" : "-right-full"}`}
+        >
+          <div>
+            <div className="flex justify-between items-center py-4">
+              <div className="text-3xl px-4">&lt;SS/&gt;</div>
+              <button>
+                <CiSquareRemove className="w-12 h-12" onClick={Hidden} />
+              </button>
+            </div>
+            <div className="border-b-2 border-t-2 border-solid py-4">
+              <div className="flex flex-col gap-4 px-4">
+                {HeadItems.map((item, link) => (
+                  <Link onClick={Hidden} href={item.link} key={link}>
+                    {item.title}
+                  </Link>
+                ))}
+              </div>
+            </div>
+            <div className="p-4">
+              <div className="flex justify-between">
+                <div>Switch Theme</div>
+                <button onClick={DarkOff} className={dark ? "block" : "hidden"}>
+                  <IoMoonOutline />
+                </button>
+                <button onClick={DarkOn} className={dark ? "hidden" : "block"}>
+                  <FiSun />
+                </button>
+              </div>
+              <div className="flex justify-center mt-4">
+                <AwesomeButton>Download Cv</AwesomeButton>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <div className="flex justify-between items-center">
         <div className="text-3xl">&lt;SS/&gt;</div>
         <div className="hidden md:flex gap-6 items-center ">
@@ -35,11 +98,17 @@ export const Head = () => {
           >
             <line x1="0.5" y1="24" x2="0.5" stroke="#F3F4F6" />
           </svg>
-          <FiSun />
+          <button onClick={DarkOff} className={dark ? "block" : "hidden"}>
+            <IoMoonOutline />
+          </button>
+          <button onClick={DarkOn} className={dark ? "hidden" : "block"}>
+            <FiSun />
+          </button>
           <AwesomeButton>Download Cv</AwesomeButton>
         </div>
-
-        <IoIosMenu className="size-6 md:hidden" />
+        <button className="md:hidden">
+          <IoIosMenu className="size-6" onClick={Block} />
+        </button>
       </div>
       <HeadInformation />
     </div>
