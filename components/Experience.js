@@ -52,7 +52,7 @@ export const Experience = () => {
               <h2 className="mb-4">{item.title}</h2>
               <ul className="flex flex-col gap-1 list-disc px-4">
                 {item.listItem.map((item, index) => (
-                  <li>{item}</li>
+                  <li key={index}>{item}</li>
                 ))}
               </ul>
             </div>

@@ -57,7 +57,7 @@ export const Work = () => {
       <div className="mb-4">
         <BUttons title={"work"} />
       </div>
-      <div className="mb-6 text-center">
+      <div className="text-center">
         Some of the noteworthy projects I have built:
       </div>
       <div>
@@ -69,10 +69,14 @@ export const Work = () => {
 
 function Works() {
   return (
-    <div className="rounded-xl">
+    <div>
       {skills.map((item, index) => (
-        <div className="md:flex" key={index}>
-          <div className="p-8 bg-[#F9FAFB] mix-w-[343px] max-w-[576px] md:w-[50%]">
+        <div className="md:flex pt-6 md:pt-12 rounded-xl shadow" key={index}>
+          <div
+            className={`p-8 bg-[#F9FAFB] max-w-[576px] flex-1 ${
+              index % 2 === 1 ? "order-10" : ""
+            }`}
+          >
             <Image
               className="w-full"
               width={480}
@@ -80,7 +84,7 @@ function Works() {
               src={"/images/Picture.png"}
             />
           </div>
-          <div className="p-8 flex flex-col gap-6">
+          <div className="p-8 flex-1 flex flex-col gap-6">
             <h2>{item.title}</h2>
             <p>{item.text}</p>
             <div className="flex gap-2 flex-wrap">

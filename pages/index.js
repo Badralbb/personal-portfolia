@@ -1,5 +1,7 @@
 import { AboutMe } from "@/components/AboutMe";
 import { Experience } from "@/components/Experience";
+import { Footer } from "@/components/Footer";
+import { FooterNav } from "@/components/FooterNav";
 import { Head } from "@/components/Head";
 import { Skills } from "@/components/Skills";
 import { Work } from "@/components/Work";
@@ -26,6 +28,12 @@ export default function Home() {
       </section>
       <section className="max-w-[1280px] mx-auto px-4 py-16">
         <Work />
+      </section>
+      <section className="max-w-[1280px] mx-auto px-4 py-16 md:py-24">
+        <Footer />
+      </section>
+      <section className="bg-[#F9FAFB] py-6">
+        <FooterNav />
       </section>
     </main>
   );
