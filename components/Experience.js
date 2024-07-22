@@ -31,7 +31,7 @@ const Upwork = [
 ];
 export const Experience = () => {
   return (
-    <div>
+    <div className="text-[#4B5563] dark:text-[#D1D5DB]">
       <div className="mb-4">
         <BUttons title={"Experience"} />
       </div>
@@ -42,14 +42,14 @@ export const Experience = () => {
         {Upwork.map((item, index) => (
           <div
             key={index}
-            className="bg-white p-8 shadow rounded-xl flex flex-col gap-4 w-full md:flex-row justify-between max-w-[896px] mx-auto"
+            className="bg-white dark:bg-[#1F2937] p-8 shadow rounded-xl flex flex-col gap-4 w-full md:flex-row justify-between max-w-[896px] mx-auto"
           >
             <div>
               <Image width={100} height={100} src={"/images/logo-upwork.png"} />
             </div>
             <div className="md:order-10 ">{item.Date}</div>
             <div className="max-w-[384px] w-[100%]">
-              <h2 className="mb-4">{item.title}</h2>
+              <h2 className="mb-4 text-[#111827] dark:text-[#F9FAFB] text-xl">{item.title}</h2>
               <ul className="flex flex-col gap-1 list-disc px-4">
                 {item.listItem.map((item, index) => (
                   <li key={index}>{item}</li>

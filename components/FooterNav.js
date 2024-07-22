@@ -1,6 +1,6 @@
 export const FooterNav = () => {
   return (
-    <div className="flex gap-2 justify-center items-center">
+    <div className="flex gap-2 justify-center items-center text-[#4B5563] dark:text-[#D1D5DB]">
       <svg
         width="17"
         height="16"

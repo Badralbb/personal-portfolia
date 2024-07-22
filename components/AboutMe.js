@@ -6,7 +6,7 @@ export const AboutMe = () => {
     <div id="about" className="py-16">
       <BUttons title={"about"} />
       <div className="flex flex-col gap-12 items-center md:flex-row md:items-start md:justify-between mt-12">
-        <div className="max-w-[400px] flex md:flex-1 bg-[black] w-full justify-center md:mt-[25px]">
+        <div className="max-w-[400px] flex md:flex-1 dark:bg-[#374151] bg-[#E5E7EB] w-full justify-center md:mt-[25px]">
           <Image
             src={"/images/Pic.jpg"}
             width={400}
@@ -14,8 +14,8 @@ export const AboutMe = () => {
             className="relative top-[-15px] w-[90%] md:w-[100%] md:right-[-20px] md:top-[-25px]"
           />
         </div>
-        <div className="flex flex-col gap-6 md:w-[60%]">
-          <h1>Curious about me? Here you have it:</h1>
+        <div className="flex flex-col gap-6 md:w-[60%] text-[#4B5563] dark:text-[#D1D5DB]">
+          <h1 className="text-[#111827] text-3xl dark:text-[#F9FAFB]">Curious about me? Here you have it:</h1>
           <p>
             I'm a passionate, self-proclaimed designer who specializes in full
             stack development (React.js & Node.js). I am very enthusiastic about

@@ -71,9 +71,9 @@ function Works() {
   return (
     <div>
       {skills.map((item, index) => (
-        <div className="md:flex pt-6 md:pt-12 rounded-xl shadow" key={index}>
+        <div className="md:flex pt-6 md:pt-12 rounded-xl shadow text-[#4B5563] dark:text-[#D1D5DB]" key={index}>
           <div
-            className={`p-8 bg-[#F9FAFB] max-w-[576px] flex-1 ${
+            className={`p-8 bg-[#F9FAFB] dark:bg-[#374151] flex-1 ${
               index % 2 === 1 ? "order-10" : ""
             }`}
           >
@@ -84,12 +84,12 @@ function Works() {
               src={"/images/Picture.png"}
             />
           </div>
-          <div className="p-8 flex-1 flex flex-col gap-6">
-            <h2>{item.title}</h2>
+          <div className="p-8 flex-1 flex flex-col gap-6 dark:bg-[#1F2937]">
+            <h2 className="text-[#111827] dark:text-[#F9FAFB] text-xl">{item.title}</h2>
             <p>{item.text}</p>
             <div className="flex gap-2 flex-wrap">
               {item.skill.map((item, index) => (
-                <div className="bg-[#E5E7EB] px-6 py-1 rounded-xl" key={index}>
+                <div className="bg-[#E5E7EB] dark:bg-[#374151] px-6 py-1 rounded-xl" key={index}>
                   {item}
                 </div>
               ))}

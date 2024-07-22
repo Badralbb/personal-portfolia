@@ -7,7 +7,7 @@ import { LuTwitter } from "react-icons/lu";
 import { FaFigma } from "react-icons/fa";
 export const Footer = () => {
   return (
-    <div id="contact">
+    <div id="contact" className="text-[#4B5563] dark:text-[#D1D5DB]">
       <div className="mb-4">
         <BUttons title={"Get in touch"} />
       </div>
@@ -18,12 +18,12 @@ export const Footer = () => {
       <div className="mb-6">
         <div className="flex gap-4 md:gap-5 mb-1 justify-center items-center">
           <FiMessageSquare />
-          <div>reachsagarshah@gmail.com</div>
+          <div className="text-[#111827] text-4xl dark:text-[#F9FAFB]">reachsagarshah@gmail.com</div>
           <FaMobileScreenButton />
         </div>
         <div className="flex gap-4 md:gap-5 justify-center items-center">
           <FaPhoneVolume />
-          <div>+91 8980500565</div>
+          <div className="text-[#111827] dark:text-[#F9FAFB] text-4xl">+91 8980500565</div>
           <FaMobileScreenButton />
         </div>
       </div>

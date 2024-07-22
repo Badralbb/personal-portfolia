@@ -9,11 +9,11 @@ import { AwesomeButton } from "react-awesome-button";
 import "react-awesome-button/dist/styles.css";
 export default function Home() {
   return (
-    <main>
+    <main className="dark:bg-[#030712]">
       <section className="max-w-[1280px] mx-auto px-4">
         <Head />
       </section>
-      <section className="bg-[#F9FAFB] px-4">
+      <section className="bg-[#F9FAFB] px-4 dark:bg-[#111827]">
         <div className="max-w-[1280px] mx-auto">
           <AboutMe />
         </div>
@@ -21,7 +21,7 @@ export default function Home() {
       <section className="max-w-[1280px] mx-auto px-4 py-16">
         <Skills />
       </section>
-      <section className="bg-[#F9FAFB] px-4 py-16">
+      <section className="bg-[#F9FAFB] px-4 py-16 dark:bg-[#111827]">
         <div className="max-w-[1280px] mx-auto">
           <Experience />
         </div>
@@ -32,7 +32,7 @@ export default function Home() {
       <section className="max-w-[1280px] mx-auto px-4 py-16 md:py-24">
         <Footer />
       </section>
-      <section className="bg-[#F9FAFB] py-6">
+      <section className="bg-[#F9FAFB] dark:bg-[#111827] py-6">
         <FooterNav />
       </section>
     </main>

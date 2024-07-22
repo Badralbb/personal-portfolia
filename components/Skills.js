@@ -20,7 +20,7 @@ const logo = [
 ];
 export const Skills = () => {
   return (
-    <div id="skills">
+    <div id="skills" className="text-[#4B5563] dark:text-[#D1D5DB]">
       <div className="mb-4">
         <BUttons title={"Skills"} />
       </div>
