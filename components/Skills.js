@@ -31,7 +31,7 @@ export const Skills = () => {
       <div className="flex gap-x-[60px] gap-y-2 flex-wrap items-center md:gap-x-[80px] md:gap-y-12">
         {logo.map((item, index) => (
           <div key={index} className="flex flex-col gap-2 items-center">
-            <Image width={64} height={64} src={item.image} />
+            <Image className="dark:fill-white" width={64} height={64} src={item.image} />
             <div>{item.title}</div>
           </div>
         ))}
