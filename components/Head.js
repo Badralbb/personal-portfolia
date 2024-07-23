@@ -58,7 +58,7 @@ export const Head = () => {
                         <div className="border-b-2 border-t-2 border-solid py-4">
                             <div className="flex flex-col gap-4 px-4">
                                 {HeadItems.map((item, link) => (
-                                    <Link  onClick={Hidden} href={item.link} key={link}>
+                                    <Link onClick={Hidden} href={item.link} key={link}>
                                         {item.title}
                                     </Link>
                                 ))}
@@ -74,9 +74,12 @@ export const Head = () => {
                                     <FiSun />
                                 </button>
                             </div>
-                            <div className="flex justify-center mt-4">
-                                <AwesomeButton>Download Cv</AwesomeButton>
-                            </div>
+                            <Link href="Light - Desktop.pdf">
+                                <div className="flex justify-center mt-4">
+                                    <AwesomeButton>
+                                        Download Cv fafa</AwesomeButton>
+                                </div>
+                            </Link>
                         </div>
                     </div>
                 </div>
