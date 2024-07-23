@@ -74,7 +74,7 @@ export const Head = () => {
                                     <FiSun />
                                 </button>
                             </div>
-                            <Link target="block" href="Light - Mobile.pdf">
+                            <Link target="block" href={dark ? "Dark - Mobile.pdf" : "Light - Mobile.pdf"}>
                                 <div className="flex justify-center mt-4">
                                     <AwesomeButton>
                                         Download Cv</AwesomeButton>
@@ -108,7 +108,7 @@ export const Head = () => {
                     <button onClick={DarkOn} className={dark ? "hidden" : "block"}>
                         <FiSun />
                     </button>
-                    <Link target="block" href={"Light - Desktop.pdf"}>
+                    <Link target="block" href={dark ? "Dark - Desktop.pdf" : "Light - Desktop.pdf"}>
 
                         <AwesomeButton>Download Cv</AwesomeButton>
                     </Link>
