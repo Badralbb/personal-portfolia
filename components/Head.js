@@ -74,10 +74,11 @@ export const Head = () => {
                                     <FiSun />
                                 </button>
                             </div>
-                            <Link href="Light - Desktop.pdf">
+                            <Link target="block" href="Light - Mobile.pdf">
                                 <div className="flex justify-center mt-4">
                                     <AwesomeButton>
-                                        Download Cv fafa</AwesomeButton>
+                                        Download Cv</AwesomeButton>
+
                                 </div>
                             </Link>
                         </div>
@@ -107,7 +108,10 @@ export const Head = () => {
                     <button onClick={DarkOn} className={dark ? "hidden" : "block"}>
                         <FiSun />
                     </button>
-                    <AwesomeButton>Download Cv</AwesomeButton>
+                    <Link target="block" href={"Light - Desktop.pdf"}>
+
+                        <AwesomeButton>Download Cv</AwesomeButton>
+                    </Link>
                 </div>
                 <button className="md:hidden">
                     <IoIosMenu className="size-6" onClick={Block} />
