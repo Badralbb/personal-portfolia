@@ -29,9 +29,11 @@ export const Head = () => {
     const [dark, setDark] = useState(false);
     function DarkOn() {
         setDark(true);
+        document.documentElement.classList.add('dark')
     }
     function DarkOff() {
         setDark(false);
+        document.documentElement.classList.remove('dark')
     }
     return (
         <div>
